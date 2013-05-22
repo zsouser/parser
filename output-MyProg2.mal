@@ -1,0 +1,27 @@
+Welcome to the MAL interpreter. Below is the program with errors shown.
+
+Author: Zach Souser
+Class: CS 3210
+ADD r0, r2, FORTY
+DIV A, B, C
+MOVEI 5, B
+LAB:
+BR DOG
+
+
+-------------------------------
+
+Wrong Operand Type - 0
+Too Many Operands - 0
+Too Few Operands - 0
+Invalid Opcode - 0
+Ill-Formed Operand - 0
+
+
+***** Branch DOG is invalid.
+
+
+
+Total number of lines: 5
+
+This MAL code is INVALID

@@ -1,0 +1,13 @@
+; This MAL code should run with no syntax errors, but 
+; more specifically tests the branching mechanism. Since
+; this program branches to DOG which is not defined, an error
+; results. 
+;
+; Author: Zach Souser
+; Class: CS 3210
+
+ADD r0, r2, FORTY ; good
+DIV A, B, C		  ; good
+MOVEI 5, B		  ; good
+LAB:  	 		  ; good
+		BR DOG 	  ; BAD

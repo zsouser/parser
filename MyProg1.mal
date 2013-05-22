@@ -1,0 +1,19 @@
+;
+; Test program 1 is filled with errors. Hopefully they all get caught
+; Author: Zach Souser
+; Class: CS 3210
+;
+;
+
+MOVE r2, 2				; wrong operand type 
+MOVE r3, r2				; valid
+MOVE r4, r5, r7			; valid
+MOVEI r3, 1	 			; wrong operand type
+MOVEI 1, r3		  		; valid
+ADD r2, r3, r3	  		; valid
+ADD r3, r2				; too few operands
+ADD 1, 2, r3	  		; wrong operand type
+LABEL: ADD r3, r2, r4 	; valid
+BR LABEL   	   	   		; valid
+BLT r3, r4, LABEL 		; valid
+BLT r3, 3, LABEL  		; wrong operand type

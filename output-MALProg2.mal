@@ -1,0 +1,38 @@
+Welcome to the MAL interpreter. Below is the program with errors shown.
+
+Author: Zach Souser
+Class: CS 3210
+MOVEI 50, FORTY
+MOVEI 5, FIVE
+MOVEI 2, TWO
+MOVE  HRS, R1
+MOVE  RT, R2
+BLT	  R1,FORTY, REG
+BEQ	  R1, FORTY, REG
+MUL	  FORTY, R2, R0
+DIV   R2, TWO, R3
+ADD   R2, R3, R3
+SUB R1, FORTY, r5
+MUL r5, r3, R6
+ADD R0, R6, R0
+BR DECT
+REG: 	MUL r1, R2, R0
+DECT:	DIV R0, FIVE, R6
+SUB R0, R6, R0
+MOVE R0, PAY
+END
+
+
+-------------------------------
+
+Ill-Formed Operand - 0
+Invalid Opcode - 0
+Wrong Operand Type - 0
+Too Few Operands - 0
+Too Many Operands - 0
+
+
+
+Total number of lines: 21
+
+This MAL code is VALID

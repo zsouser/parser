@@ -1,0 +1,79 @@
+;; MAL Program #3 – Simple *for* Loop, documented
+;; 
+;; J. Gurka 
+
+;; Description:
+;;   This program illustrates a simple MAL program
+;; to be used for testing the MAL parser.  It adds
+;; the numbers from 1 to 10 using a *for* loop.
+;;   MAL program #3 is identical to MAL program #1,
+;; except that comments and blank lines have been added.  
+;; No errors have been introduced in the code.
+;;
+;; MAL instructions and features included, and to be
+;;   added (marked *)/Users/zsouser/Documents/Code/3210/mal/MyProg1.mal
+;;    1. blank lines
+;;       a) between comments, single
+;;       b) between comments, multiple
+;;       c) *between code lines, single
+;;       d) *between code lines, multiple
+;;    2. comments
+;;       a) block comments
+;;       b) single line comments, with text
+;;       c) single line comments, without text
+;;       d) on-line comments
+;;    3. labels
+;;       a) with code
+;;       b) without code
+;;    4. instructions
+;;       a) MOVEI
+;;       b) MOVE
+;;       c) ADD
+;;       d) INC
+;;       e) BGT
+;;       f) BR
+;;       g) *SUB
+;;       h) *MUL
+;;       i) *DIV
+;;       j) *DEC
+;;       k) *BEQ
+;;       l) *BLT
+;;    5. pseudo ops
+;;       a) END
+
+
+;; Register Use
+;;   R0 – running total of loop index values
+;;   R1 – loop index and values to be summed
+;;   R2 – loop upper limit
+;;   R3 .. R7 - unused
+
+;; Variable
+;;   TOTAL – contains the sum of the values
+;;     one through ten
+
+;; Labels
+;;   TOP – first line of for loop, used for
+;;     branching back
+;;   CONT – line after end of for loop
+
+
+; initialize
+;
+          MOVEI     0, R0             ; running total
+          MOVEI     1, R1             ; *for* loop index
+          MOVEI     12, R2            ; loop limit, 12 octal = 10
+
+; for loop: top test, definite loop
+  TOP:    
+          BGT       R1, R2, CONT      ; index > 10?
+          ADD       R0, R1, R0        ; total + index = total
+          INC       R1                ; index++
+          BR        TOP
+  CONT:   MOVE      R0, TOTAL         ; save final sum
+
+; program complete      
+          END
+
+
+

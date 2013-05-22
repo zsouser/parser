@@ -1,0 +1,40 @@
+Welcome to the MAL interpreter. Below is the program with errors shown.
+
+Author: Zach Souser
+Class: CS 3210
+MOVE r2, 2
+--> Wrong operand type. Found NUM
+MOVE r3, r2
+MOVE r4, r5, r7
+--> Too many operands. Found 3 expected 2
+MOVEI r3, 1
+--> Wrong operand type. Found REG
+MOVEI 1, r3
+ADD r2, r3, r3
+ADD r3, r2
+--> Too few operands. Found 2 expected 3
+ADD 1, 2, r3
+--> Wrong operand type. Found NUM
+LABEL: ADD r3, r2, r4
+BR LABEL
+BLT r3, r4, LABEL
+BLT r3, 3, LABEL
+--> Wrong operand type. Found NUM
+
+
+-------------------------------
+
+Invalid Opcode - 0
+Ill-Formed Operand - 0
+Too Few Operands - 1
+Too Many Operands - 1
+Wrong Operand Type - 4
+
+
+***** Branch LABEL is invalid.
+
+
+
+Total number of lines: 13
+
+This MAL code is INVALID

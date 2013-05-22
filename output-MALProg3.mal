@@ -1,0 +1,29 @@
+Welcome to the MAL interpreter. Below is the program with errors shown.
+
+Author: Zach Souser
+Class: CS 3210
+MOVEI     0, R0
+MOVEI     1, R1
+MOVEI     12, R2
+TOP:
+BGT       R1, R2, CONT
+ADD       R0, R1, R0
+INC       R1
+BR        TOP
+CONT:   MOVE      R0, TOTAL
+END
+
+
+-------------------------------
+
+Ill-Formed Operand - 0
+Too Few Operands - 0
+Invalid Opcode - 0
+Too Many Operands - 0
+Wrong Operand Type - 0
+
+
+
+Total number of lines: 11
+
+This MAL code is VALID

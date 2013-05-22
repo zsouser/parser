@@ -1,0 +1,10 @@
+		MOVEI 0, r0
+		MOVEI 1, r1
+		MOVEI 12, r2
+TOP:
+		BGT r1, r2, CONT
+		ADD r0, r1, r0
+		INC r1
+		BR TOP
+CONT:	MOVE r0, total
+		END
